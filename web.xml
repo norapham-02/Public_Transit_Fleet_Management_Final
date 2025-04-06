@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <!-- Optional: JNDI-based DB config (not used in your code, but can be used later) -->
+    <resource-ref>
+        <res-ref-name>jdbc/MyDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <!-- RegisterServlet -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>viewlayer.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ApproveUserServlet</servlet-name>
+        <servlet-class>viewlayer.admin.ApproveUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApproveUserServlet</servlet-name>
+        <url-pattern>/approveUser</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>viewlayer.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>viewlayer.admin.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>viewlayer.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GpsLogServlet</servlet-name>
+        <servlet-class>viewlayer.GpsLogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GpsLogServlet</servlet-name>
+        <url-pattern>/GpsLogServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ViewGpsReportServlet</servlet-name>
+        <servlet-class>viewlayer.ViewGpsReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewGpsReportServlet</servlet-name>
+        <url-pattern>/ViewGpsReportServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MaintenanceReportServlet</servlet-name>
+        <servlet-class>viewlayer.MaintenanceReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaintenanceReportServlet</servlet-name>
+        <url-pattern>/maintenanceReport</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MaintenanceReportServlet</servlet-name>
+        <servlet-class>viewlayer.MaintenanceReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaintenanceReportServlet</servlet-name>
+        <url-pattern>/maintenance</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetAllVehiclesServlet</servlet-name>
+        <servlet-class>viewlayer.GetAllVehiclesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetAllVehiclesServlet</servlet-name>
+        <url-pattern>/GetAllVehiclesServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FuelReportServlet</servlet-name>
+        <servlet-class>viewlayer.FuelReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FuelReportServlet</servlet-name>
+        <url-pattern>/fuelReport</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddVehicleServlet</servlet-name>
+        <servlet-class>viewlayer.AddVehicleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddVehicleServlet</servlet-name>
+        <url-pattern>/AddVehicleServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddMaintenanceServlet</servlet-name>
+        <servlet-class>viewlayer.AddMaintenanceServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddMaintenanceServlet</servlet-name>
+        <url-pattern>/AddMaintenanceServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewAssignedVehicleServlet</servlet-name>
+        <servlet-class>viewlayer.ViewAssignedVehicleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewAssignedVehicleServlet</servlet-name>
+        <url-pattern>/ViewAssignedVehicle</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OperatorPerformanceServlet</servlet-name>
+        <servlet-class>viewlayer.OperatorPerformanceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OperatorPerformanceServlet</servlet-name>
+        <url-pattern>/OperatorPerformanceServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- LoadAssignFormServlet -->
+    <servlet>
+        <servlet-name>LoadAssignFormServlet</servlet-name>
+        <servlet-class>viewlayer.LoadAssignFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadAssignFormServlet</servlet-name>
+        <url-pattern>/LoadAssignFormServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- AssignVehicleServlet -->
+    <servlet>
+        <servlet-name>AssignVehicleServlet</servlet-name>
+        <servlet-class>viewlayer.AssignVehicleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AssignVehicleServlet</servlet-name>
+        <url-pattern>/AssignVehicleServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ScheduleMaintenanceServlet</servlet-name>
+        <servlet-class>viewlayer.ScheduleMaintenanceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ScheduleMaintenanceServlet</servlet-name>
+        <url-pattern>/ScheduleMaintenanceServlet</url-pattern>
+    </servlet-mapping>
+
+       <servlet>
+        <servlet-name>ViewFuelAlertsServlet</servlet-name>
+        <servlet-class>viewlayer.ViewFuelAlertsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewFuelAlertsServlet</servlet-name>
+        <url-pattern>/ViewFuelAlertsServlet</url-pattern>
+    </servlet-mapping>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Optional: Session config -->
+    <session-config>
+        <session-timeout>1</session-timeout>
+    </session-config>
+</web-app>
